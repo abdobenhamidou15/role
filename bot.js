@@ -193,10 +193,9 @@ function set(o,n,channel,role){
     };
 
 
-  } else if(o.voiceChannelID !== n.voiceMove && o.voiceChannel && n.voiceMove != null) {
+  } else if(o.voiceChannel !== n.voiceMove && o.voiceChannel && n.voiceMove != null) {
     if (o.voiceChannelID == channel) {
         n.removeRole(n.guild.roles.find("name", role))
-
 
 
 
