@@ -167,8 +167,8 @@ function set(o,n,channel,role){
 
 client.on("voiceStateUpdate", (message, new1) => {
 
-  var channel = "462457162061578240";
-  var role = "Quran☪"
+  var channel = "471009087887507456";
+  var role = "Music 🎵"
   set(message,new1,channel,role);
 });
 
