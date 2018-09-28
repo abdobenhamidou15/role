@@ -17,12 +17,93 @@ client.on('ready', () => {
     ------------------------------------------------------
     ------------------------[ abdo ]----------------------`);
   });
+client.on("voiceStateUpdate", (message, new1) => {
+
+    var channel = "471009091003613184";
+    var role = "💎 In the voice"
+    set(message,new1,channel,role);
+  });
+  
+  function set(o,n,channel,role){
+    if (!o.voiceChannel && n.voiceChannel) {
+      if (n.voiceChannelID == channel) {
+          n.addRole(n.guild.roles.find("name", role));
+      };
+  
+    } else if (o.voiceChannel && !n.voiceMove) {
+      if (o.voiceChannelID == channel) {
+          n.removeRole(n.guild.roles.find("name", role))
+  
+  
+  
+  } else if (o.voiceChannel && !n.voiceChannel) {
+      if (o.voiceChannelID == channel) {
+          n.removeRole(n.guild.roles.find("name", role))
+      }
+  }
+  }
+  }
+
+
+  client.on("voiceStateUpdate", (message, new1) => {
+
+    var channel = "481461458899566593";
+    var role = "🌠 In the voice"
+    set(message,new1,channel,role);
+  });
+  
+  function set(o,n,channel,role){
+    if (!o.voiceChannel && n.voiceChannel) {
+      if (n.voiceChannelID == channel) {
+          n.addRole(n.guild.roles.find("name", role));
+      };
+  
+    } else if (o.voiceChannel && !n.voiceMove) {
+      if (o.voiceChannelID == channel) {
+          n.removeRole(n.guild.roles.find("name", role))
+  
+  
+  
+  } else if (o.voiceChannel && !n.voiceChannel) {
+      if (o.voiceChannelID == channel) {
+          n.removeRole(n.guild.roles.find("name", role))
+      }
+  }
+  }
+  }
+
+client.on("voiceStateUpdate", (message, new1) => {
+
+    var channel = "471009088529104906";
+    var role = "🌹 In the voice"
+    set(message,new1,channel,role);
+  });
+  
+  function set(o,n,channel,role){
+    if (!o.voiceChannel && n.voiceChannel) {
+      if (n.voiceChannelID == channel) {
+          n.addRole(n.guild.roles.find("name", role));
+      };
+  
+    } else if (o.voiceChannel && !n.voiceMove) {
+      if (o.voiceChannelID == channel) {
+          n.removeRole(n.guild.roles.find("name", role))
+  
+  
+  
+  } else if (o.voiceChannel && !n.voiceChannel) {
+      if (o.voiceChannelID == channel) {
+          n.removeRole(n.guild.roles.find("name", role))
+      }
+  }
+  }
+  }
 
 
 client.on("voiceStateUpdate", (message, new1) => {
 
-  var channel = "450356320437141514";
-  var role = "Black squad"
+  var channel = "471009088843808781";
+  var role = "🍃 In the voice"
   set(message,new1,channel,role);
 });
 
@@ -48,8 +129,8 @@ function set(o,n,channel,role){
 
 client.on("voiceStateUpdate", (message, new1) => {
 
-  var channel = "450717457230069761";
-  var role = "Online"
+  var channel = "471009084833792011";
+  var role = "🍆 In the voice"
   set(message,new1,channel,role);
 });
 
@@ -74,8 +155,8 @@ function set(o,n,channel,role){
 }
 client.on("voiceStateUpdate", (message, new1) => {
 
-  var channel = "433738932166066192";
-  var role = "Voice"
+  var channel = "471009090378661918";
+  var role = "🐙 In the voice"
   set(message,new1,channel,role);
 });
 
@@ -128,8 +209,8 @@ function set(o,n,channel,role){
 
 client.on("voiceStateUpdate", (message, new1) => {
 
-  var channel = "483682002151931935";
-  var role = "Gay 🎀"
+  var channel = "471009085538566145";
+  var role = "Music 🎵"
   set(message,new1,channel,role);
 });
 
@@ -154,8 +235,8 @@ function set(o,n,channel,role){
 }
 client.on("voiceStateUpdate", (message, new1) => {
 
-  var channel = "435510792452833280";
-  var role = "[MR] Squad🎤"
+  var channel = "471009085760995329";
+  var role = "Music 🎵"
   set(message,new1,channel,role);
 });
 
@@ -192,7 +273,7 @@ function set(o,n,channel,role){
         n.addRole(n.guild.roles.find("name", role));
     };
 
-  } else if(o.voiceChannel !== n.voiceMove && o.voiceMove && n.voiceChannel != null) {
+} else if (o.voiceChannel && !n.voiceMove) {
     if (o.voiceChannelID == channel) {
         n.removeRole(n.guild.roles.find("name", role))
 
@@ -206,9 +287,5 @@ function set(o,n,channel,role){
 }
 }
 }
-
-
-
-
 
 client.login(process.env.BOT_TOKEN);
