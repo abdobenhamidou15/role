@@ -2,7 +2,21 @@ const Discord = require('discord.js');
 const client = new Discord.Client(); 
 
 
-
+client.on('ready', () => { 
+    console.log(`
+    ------------------------------------------------------
+    > Logging in...
+    ------------------------------------------------------
+    Name ${client.user.tag}
+    In ${client.guilds.size} servers!
+    ${client.channels.size} channels and ${client.users.size} users cached!
+    I am logged in and ready to roll!
+    LET'S GO!
+    ------------------------------------------------------
+    ------------------------------------------------------
+    ------------------------------------------------------
+    ------------------------[ abdo ]----------------------`);
+  });
 
 
 client.on("voiceStateUpdate", (message, new1) => {
