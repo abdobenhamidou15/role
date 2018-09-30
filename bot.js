@@ -17,6 +17,36 @@ client.on('ready', () => {
     ------------------------------------------------------
     ------------------------[ abdo ]----------------------`);
   });
+
+
+
+
+const adminww = "--";
+client.on('message', message => {
+if (message.content === adminww + 'idle') {
+     if (message.author.id !== '406192153979518976') return ;
+     client.user.setStatus("idle")
+}
+});
+
+const adminabdo = "--";
+client.on('message', message => {
+if (message.content === adminabdo + 'online') {
+     if (message.author.id !== '406192153979518976') return ;
+     client.user.setStatus("online")
+}
+});
+
+const adminben = "--";
+client.on('message', message => {
+if (message.content === adminben + 'dnd') {
+     if (message.author.id !== '406192153979518976') return ;
+     client.user.setStatus("dnd")
+}
+});
+
+
+
 client.on("voiceStateUpdate", (message, new1) => {
 
     var channel = "471009091003613184";
